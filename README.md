@@ -98,7 +98,7 @@
 Параметр Lr отвечает за 
 
 
-![Google Colab]https://colab.research.google.com/drive/1eQsPkktAB2XMfCta8hoC3TpWn2LfpNuf#scrollTo=0l8xO3GjvUuK
+[Google Colab](https://colab.research.google.com/drive/1eQsPkktAB2XMfCta8hoC3TpWn2LfpNuf#scrollTo=0l8xO3GjvUuK)
 
 ## Выводы
 
