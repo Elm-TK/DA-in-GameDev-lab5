@@ -95,10 +95,11 @@
 выполнения кода, который подтверждает ваш ответ. В качестве эксперимента
 можете изменить значение параметра.
 
-Параметр Lr отвечает за 
+Параметр Lr отвечает за шаг изменения значений при каждой итерации (Чем больше Lr, тем больше шаг). 
+На графике изменение параметра Lr отражается углом наклона прямой.
 
 
-[Google Colab](https://colab.research.google.com/drive/1eQsPkktAB2XMfCta8hoC3TpWn2LfpNuf#scrollTo=0l8xO3GjvUuK)
+[Мой Google Colab](https://colab.research.google.com/drive/1eQsPkktAB2XMfCta8hoC3TpWn2LfpNuf#scrollTo=0l8xO3GjvUuK)
 
 ## Выводы
 
