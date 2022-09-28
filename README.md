@@ -90,6 +90,7 @@
 подтверждает ваш ответ.
 
 Значение loss стремиться к 0 при значениях x и y стремящихся к 0. (Чем меньше значения x и y, тем ближе значение loss к 0)
+
 ![](https://github.com/Elm-TK/DA-in-GameDev-lab1/blob/main/11.png)
 ![](https://github.com/Elm-TK/DA-in-GameDev-lab1/blob/main/12.png)
 ![](https://github.com/Elm-TK/DA-in-GameDev-lab1/blob/main/13.png)
