@@ -43,6 +43,26 @@
 ### Реализовать совместную работу и передачу данных в связке Python - Google-Sheets – Unity.
 Ход работы:
 
+- В облачном сервисе google console подключить API для работы с google sheets и google drive.
+
+![](https://github.com/Elm-TK/DA-in-GameDev-lab2/blob/main/1.png)
+![](https://github.com/Elm-TK/DA-in-GameDev-lab2/blob/main/2.png)
+
+
+- Реализовать запись данных из скрипта на python в google-таблицу. Данные описывают изменение темпа инфляции на протяжении 11 отсчётных периодов, с учётом стоимости игрового объекта в каждый период.
+
+![](https://github.com/Elm-TK/DA-in-GameDev-lab2/blob/main/3.png)
+
+
+- Создать новый проект на Unity, который будет получать данные из google-таблицы, в которую были записаны данные в предыдущем пункте.
+
+![](https://github.com/Elm-TK/DA-in-GameDev-lab2/blob/main/4.png)
+
+
+- Написать функционал на Unity, в котором будет воспризводиться аудио-файл в зависимости от значения данных из таблицы.
+
+![](https://github.com/Elm-TK/DA-in-GameDev-lab2/blob/main/5.png)
+
 ## Задание 2
 ### Реализовать запись в Google-таблицу набора данных, полученных с помощью линейной регрессии из лабораторной работы № 1. 
 
