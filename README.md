@@ -201,5 +201,6 @@ public class NewBehaviourScript : MonoBehaviour
 ```
 
 ## Выводы
+В ходе этой лабораторной работы я научился оганизовывать передачу данных между Google, Python и Unity с помощью связки Python — Google-Sheets — Unity.
 
 
