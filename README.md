@@ -109,7 +109,7 @@ public class RollerAgent : Agent
 
 Добавил в директорию проекта файл yaml c таким содерданием:
 
-```
+```yaml
 behaviors:
   RollerBall:
     trainer_type: ppo
@@ -139,7 +139,11 @@ behaviors:
 
 ![](https://github.com/Elm-TK/DA-in-GameDev-lab3/blob/main/1.png)
 
-Результат обучения: шар достигает куба достаточно плавно, точно и по оптимальной траектории.
+Присвоил файл, полученный в результате обучения, шару.
+
+![](https://github.com/Elm-TK/DA-in-GameDev-lab3/blob/main/3.png)
+
+В результате шар достигает куба достаточно плавно, точно и по оптимальной траектории.
 
 ![](https://github.com/Elm-TK/DA-in-GameDev-lab3/blob/main/2.gif)
 
