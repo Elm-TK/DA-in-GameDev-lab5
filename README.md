@@ -41,6 +41,9 @@
 ## Задание 1
 ### Реализовать систему машинного обучения в связке Python - Google-Sheets – Unity.
 
+![](https://github.com/Elm-TK/DA-in-GameDev-lab2/blob/main/1.png)
+
+![](https://github.com/Elm-TK/DA-in-GameDev-lab2/blob/main/2.png)
 
 ## Задание 2
 ### Подробно опишите каждую строку файла конфигурации нейронной сети, доступного в папке с файлами проекта по ссылке. Самостоятельно найдите информацию о компонентах Decision Requester, Behavior Parameters, добавленных на сфере.
