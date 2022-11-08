@@ -339,6 +339,7 @@ public class RollerAgent : Agent
 ```
 
 Обучил модель двигаться между двумя целями:
+
 ![](https://github.com/Elm-TK/DA-in-GameDev-lab3/blob/main/5.png)
 
 Результат:
