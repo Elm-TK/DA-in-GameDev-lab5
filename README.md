@@ -342,6 +342,7 @@ public class RollerAgent : Agent
 ![](https://github.com/Elm-TK/DA-in-GameDev-lab3/blob/main/5.png)
 
 Результат:
+
 ![](https://github.com/Elm-TK/DA-in-GameDev-lab3/blob/main/4.gif)
 
 ## Выводы
