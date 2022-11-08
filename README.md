@@ -250,6 +250,100 @@ Cоответствует количеству шагов сбора опыта 
 ## Задание 3
 ### Доработайте сцену и обучите ML-Agent таким образом, чтобы шар перемещался между двумя кубами разного цвета. Кубы должны, как и в первом задании, случайно изменять координаты на плоскости. 
 
+Доработал код для того, чтобы шар перемещался между двумя кубами:
+```cs
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using Unity.MLAgents;
+using Unity.MLAgents.Sensors;
+using Unity.MLAgents.Actuators;
+
+public class RollerAgent : Agent
+{
+    Rigidbody rBody;
+    // Start is called before the first frame update
+    void Start()
+    {
+        rBody = GetComponent<Rigidbody>();
+    }
+
+    public GameObject Target;
+    public GameObject Target1;
+
+    private bool targetAchieved;
+    private bool target1Achieved;
+
+    public override void OnEpisodeBegin()
+    {
+        if (this.transform.localPosition.y < 0)
+        {
+            this.rBody.angularVelocity = Vector3.zero;
+            this.rBody.velocity = Vector3.zero;
+            this.transform.localPosition = new Vector3(0, 0.5f, 0);
+        }
+
+        Target.transform.localPosition = new Vector3(Random.value * 8 - 4, 0.5f, Random.value * 8 - 4);
+        Target1.transform.localPosition = new Vector3(Random.value * 8 - 4, 0.5f, Random.value * 8 - 4);
+        Target.SetActive(true);
+        Target1.SetActive(true);
+        targetAchieved = false;
+        target1Achieved = false;
+    }
+    public override void CollectObservations(VectorSensor sensor)
+    {
+        sensor.AddObservation(Target.transform.localPosition);
+        sensor.AddObservation(Target1.transform.localPosition);
+        sensor.AddObservation(this.transform.localPosition);
+        sensor.AddObservation(targetAchieved);
+        sensor.AddObservation(target1Achieved);
+        sensor.AddObservation(rBody.velocity.x);
+        sensor.AddObservation(rBody.velocity.z);
+    }
+
+    public float forceMultiplier = 10;
+    public override void OnActionReceived(ActionBuffers actionBuffers)
+    {
+        Vector3 controlSignal = Vector3.zero;
+        controlSignal.x = actionBuffers.ContinuousActions[0];
+        controlSignal.z = actionBuffers.ContinuousActions[1];
+        rBody.AddForce(controlSignal * forceMultiplier);
+
+        float distanceToTarget1 = Vector3.Distance(this.transform.localPosition, Target.transform.localPosition);
+        float distanceToTarget2 = Vector3.Distance(this.transform.localPosition, Target1.transform.localPosition);
+
+        if (!targetAchieved & distanceToTarget1 < 1.42f)
+        {
+            targetAchieved = true;
+            Target.SetActive(false);
+        }
+
+        if (!target1Achieved & distanceToTarget2 < 1.42f)
+        {
+            target1Achieved = true;
+            Target1.SetActive(false);
+        }
+
+        if (targetAchieved & target1Achieved)
+        {
+            SetReward(1.0f);
+            EndEpisode();
+        }
+        else if (this.transform.localPosition.y < 0)
+        {
+            EndEpisode();
+        }
+    }
+}
+
+```
+
+Обучил модель двигаться между двумя целями:
+![](https://github.com/Elm-TK/DA-in-GameDev-lab3/blob/main/5.png)
+
+Результат:
+![](https://github.com/Elm-TK/DA-in-GameDev-lab3/blob/main/4.gif)
+
 ## Выводы
 В ходе этой лабораторной работы я научился оганизовывать передачу данных между Google, Python и Unity с помощью связки Python — Google-Sheets — Unity.
 
