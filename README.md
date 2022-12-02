@@ -110,7 +110,7 @@ behaviors:
 
 ![](6.png)
 
-Установил strength: 0.5 (было 1).
+Установил strength: 0.5 (было 1). График Cumulative Reward опять "лёг", но ELO начала расти.
 
 ![](7.png)
 
