@@ -41,17 +41,17 @@
 
 ```yaml
 behaviors:
-  RollerBall:
+  Economic:
     trainer_type: ppo
     hyperparameters:
-      batch_size: 10
-      buffer_size: 100
+      batch_size: 1024
+      buffer_size: 10240
       learning_rate: 3.0e-4
-      beta: 5.0e-4
-      epsilon: 0.2
-      lambd: 0.99
-      num_epoch: 3
       learning_rate_schedule: linear
+      beta: 1.0e-2
+      epsilon: 0.2
+      lambd: 0.95
+      num_epoch: 3      
     network_settings:
       normalize: false
       hidden_units: 128
@@ -60,9 +60,16 @@ behaviors:
       extrinsic:
         gamma: 0.99
         strength: 1.0
-    max_steps: 500000
+    checkpoint_interval: 500000
+    max_steps: 750000
     time_horizon: 64
-    summary_freq: 10000
+    summary_freq: 5000
+    self_play:
+      save_steps: 20000
+      team_change: 100000
+      swap_steps: 10000
+      play_against_latest_model_ratio: 0.5
+      window: 10
 ```
 
 
