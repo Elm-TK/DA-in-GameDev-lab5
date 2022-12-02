@@ -113,7 +113,7 @@ behaviors:
 
 ![](7.png)
 
-beta: 1.0e-1
+Изменил значение beta на 1.0e-1. Cumulative Reward растёт, Policy Loss и ELO падают.
 
 ![](8.png)
 
